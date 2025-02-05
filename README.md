@@ -31,30 +31,30 @@ README.md                  # Step-by-step usage guide
    ```cd my-vertica-deployment```
 
 2. Deploy Infrastructure and Helm Charts
-   
-```cd terraform```
+    
+   ```cd terraform```
 
-```terraform init```
+   ```terraform init```
 
-```terraform apply```
+   ```terraform apply```
 
 
 3. Deploy Vertica DB Custom resource
    
-```cd kubernetes```
-```kubectl apply -f .```
+   ```cd kubernetes```
+   ```kubectl apply -f .```
 
 4. Verify Deployment
-   
-```kubectl get pods -n vertica```
+     
+   ```kubectl get pods -n vertica```
 
 
 5. Enable TLS by following the document:
- https://docs.vertica.com/25.1.x/en/security-and-authentication/internode-tls/
+   https://docs.vertica.com/25.1.x/en/security-and-authentication/internode-tls/
 
-Login to the pod and follow the instruction from above mentioned document.
+   Login to the pod and follow the instruction from above mentioned document.
 
-$ kubectl exec -it -n vertica verticadb-sample-sc-0 -- /bin/bash
+   $ kubectl exec -it -n vertica verticadb-sample-sc-0 -- /bin/bash
 
 # Next Steps for Production Readiness
     • High Availability: Use multi-AZ deployments for better resilience. 
