@@ -25,8 +25,8 @@ README.md                  # Step-by-step usage guide
 
 # Deployment Steps
 1. Clone Repository
-git@github.com:ammartaj53/my-vertica-deployment.git
-cd my-vertica-deployment
+   git clone git@github.com:ammartaj53/my-vertica-deployment.git
+   cd my-vertica-deployment
 
 2. Deploy Infrastructure and Helm Charts
 cd terraform
