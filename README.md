@@ -1,10 +1,9 @@
 # Vertica on Kubernetes Deployment
 
 # Repository Structure
-/terraform                 # Terraform code for infrastructure (EKS, networking, Helm chart installation for Vertica DB Operator etc.)
-/charts/database           # yaml files for vertica DB Custom Resource
-ARCHITECTURE.md            # Technical decisions & production readiness improvements
-README.md                  # Step-by-step usage guide
+```/terraform                 # Terraform code for infrastructure (EKS, networking, Helm chart installation for Vertica DB Operator etc.)```
+```/kubernetes           # yaml files for vertica DB Custom Resource```
+```README.md                  # Technical decisions & production readiness improvements, and step-by-step usage guide```
 
 # Cloud Provider: AWS
     • AWS EKS. 
