@@ -1,4 +1,3 @@
-# my-vertica-deployment
 # Vertica on Kubernetes Deployment
 
 # Repository Structure
