@@ -48,13 +48,6 @@ README.md                  # Step-by-step usage guide
    
 ```kubectl get pods -n vertica```
 
-```NAME                                              READY   STATUS    RESTARTS   AGE```
-```pod/verticadb-operator-manager-676d4d97dd-h9mlz   1/1     Running   0          27m```
-```pod/verticadb-sample-sc-0                         2/2     Running   0          53m```
-```pod/verticadb-sample-sc-1                         2/2     Running   0          53m```
-```pod/verticadb-sample-sc-2                         2/2     Running   0          53m```
-
-
 
 5. Enable TLS by following the document:
  https://docs.vertica.com/25.1.x/en/security-and-authentication/internode-tls/
@@ -62,17 +55,6 @@ README.md                  # Step-by-step usage guide
 Login to the pod and follow the instruction from above mentioned document.
 
 $ kubectl exec -it -n vertica verticadb-sample-sc-0 -- /bin/bash
-Defaulted container "nma" out of: nma, server
-bash-5.1$ vsql
-Welcome to vsql, the Vertica Analytic Database interactive terminal.
-
-Type:  \h or \? for help with vsql commands
-       \g or terminate with semicolon to execute query
-       \q to quit
-
-SSL connection (cipher: ECDHE-RSA-AES256-GCM-SHA384, bits: 256, protocol: TLSv1.2)
-
-vertdb=> 
 
 # Next Steps for Production Readiness
     • High Availability: Use multi-AZ deployments for better resilience. 
