@@ -25,28 +25,36 @@ README.md                  # Step-by-step usage guide
 
 # Deployment Steps
 1. Clone Repository
-   ```git clone git@github.com:ammartaj53/my-vertica-deployment.git
-   cd my-vertica-deployment```
+   
+   ```git clone git@github.com:ammartaj53/my-vertica-deployment.git```
+   
+   ```cd my-vertica-deployment```
 
 2. Deploy Infrastructure and Helm Charts
-cd terraform
-terraform init
-terraform apply
+   
+```cd terraform```
+
+```terraform init```
+
+```terraform apply```
+
 
 3. Deploy Vertica DB Custom resource
-cd kubernetes
-kubectl apply -f .
+   
+```cd kubernetes```
+```kubectl apply -f .```
 
 4. Verify Deployment
-kubectl get pods -n vertica
+   
+```kubectl get pods -n vertica```
 
-NAME                                              READY   STATUS    RESTARTS   AGE
-pod/verticadb-operator-manager-676d4d97dd-h9mlz   1/1     Running   0          27m
-pod/verticadb-sample-sc-0                         2/2     Running   0          53m
-pod/verticadb-sample-sc-1                         2/2     Running   0          53m
-pod/verticadb-sample-sc-2                         2/2     Running   0          53m
+```NAME                                              READY   STATUS    RESTARTS   AGE```
+```pod/verticadb-operator-manager-676d4d97dd-h9mlz   1/1     Running   0          27m```
+```pod/verticadb-sample-sc-0                         2/2     Running   0          53m```
+```pod/verticadb-sample-sc-1                         2/2     Running   0          53m```
+```pod/verticadb-sample-sc-2                         2/2     Running   0          53m```
 
-NAME                                                     STATUS   V
+
 
 5. Enable TLS by following the document:
  https://docs.vertica.com/25.1.x/en/security-and-authentication/internode-tls/
