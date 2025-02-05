@@ -1,0 +1,27 @@
+apiVersion: vertica.com/v1 
+kind: VerticaDB 
+metadata: 
+  name: verticadb-sample
+  namespace: vertica 
+spec: 
+  annotations: 
+    VERTICA_MEMDEBUG: “2”  # Required if running macOS with an arm based chip 
+  image: opentext/vertica-k8s:25.1.0-0-minimal
+  communal: 
+    path: "/communal/vertica-db-tutorial"
+#  communal:
+#    path: s3://my-test-bucket-vertica/
+#    endpoint: http://my-test-bucket-vertica.s3-website.us-east-2.amazonaws.com
+#    credentialSecret: s3-creds
+  subclusters: 
+    - name: sc 
+  local:
+    requestSize: 10Gi
+    storageClass: gp2
+  volumes: 
+  - name: communal
+    persistentVolumeClaim: 
+      claimName: local-data
+  volumeMounts: 
+  - name: communal 
+    mountPath: /communal
